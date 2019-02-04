@@ -1,0 +1,214 @@
+/* ---------- BASE SELECTORS --------- */
+/* Base HTML elements: custom styling only sets the background */
+html {
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat-y;
+}
+
+/* Body styling, which centers the page, and changes the font style */
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    padding-top: 2vw;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2vw;
+    text-shadow: 1px 1px 2px whitesmoke;
+    line-height: 1vw;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1vw;
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 2.5vw;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px whitesmoke;
+    font-size: 2.25vw;
+    line-height: 3vw;
+    padding: 2vw;
+    text-transform: none;
+}
+
+button {
+    background-color: #DE3931;
+    color: white;
+    text-shadow: 2px 2px 3px rgb(53, 52, 52);
+    text-transform: uppercase;
+}
+
+/* Pseudoclass to change the button highlighted's background */
+button:hover {
+    background-color: rgb(94, 25, 21);
+}
+
+/* ---------- CUSTOM CLASS SELECTORS --------- */
+/* --PAGE STYLING-- */
+/* The core page elements after the very large logo and subtitle overlay */
+.main {
+    background: black;
+    height: 100%;
+    width: 70%;
+    margin: 3% auto 0;
+    padding: 0 3vw;
+    border: 3px white ridge;
+}
+
+/* Places the Marvel Cinematic Universe transparent PNG's location */
+.titleImage {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+}
+
+.final {
+    border: 1px white ridge;
+}
+
+/* Slightly nudges down a few elements on the final page */
+.nudge {
+    margin-top: 1vw;
+}
+
+/* Positions the text of 'Trivia Game' basically on the Marvel Cinematic Universe logo, and styles it to be almost matching */
+.overlay {
+    display: block;
+    position: absolute;
+    top: 19.5vw;
+    left: 33.25vw;
+    text-shadow: 1px 1px 2px rgb(58, 57, 57), 0 0 25px rgb(58, 57, 57), 0 0 5px rgb(58, 57, 57);
+}
+
+/* Color Classing */
+.green {
+    color: greenyellow;
+}
+.red {
+    color: rgb(255, 90, 90);
+}
+
+/* Keeps track of current score */
+.scoreFloat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#DE3931;
+    padding: 1vw;
+    font-size: 2vw;
+    text-align: center;
+}
+
+/* --BUTTON STYLING-- */
+/* Specifics design elements for the BEGIN/NEW GAME button (to clarify: the beginBtn class exists only for the JS selection) */
+.begin {
+    padding: 5%;
+    font-size: 3vw;
+    margin: 3% 0 5%;
+}
+
+/* Design and placement for all buttons used to 'give up' in some way mid-game */
+.surrenderBtn { 
+    font-size: 1vw;
+    width: 11vw;
+    height: 6vw;
+    bottom: 25vw;
+    position: relative;
+}
+
+/*  Placement for the RESTART surrender button (used to reload to the first question with a fresh score) */
+.restartBtn {
+    right: 8.5vw;
+}
+
+/* Placement for the DO NOT KNOW surrender button (used to accept a fail without choosing a wrong answer) */
+.giveUpBtn {
+    left: 56.48vw;
+}
+
+/* General design styling for all answer buttons */
+.answerBtn {
+    font-size: 2vw;
+    margin: 1% auto;
+    position: relative;
+    float: center;
+    clear: both;
+    display: block;
+    padding: 2%;
+    width: 32vw;
+    height: 10vw;
+}
+
+/* ---------- CUSTOM ID SELECTORS --------- */
+
+/* Adds deep shadow effects "Marvel Cinematic Universe Trivia Game" text */
+#nameShadow {
+    text-shadow: 2px 2px 3px whitesmoke;
+}
+
+/* ---------- MEDIA QUERY ----------- */
+
+/* I designed the game to be clear and easy in Portrait mode.
+So essentially media queries makes the page look like it's in Portrait mode by halving all VW elements */
+
+@media (orientation: landscape) {
+
+    /* New class to contain everything, essentially a body tag, to reduce all contained percentage-based elements */
+    .portraiture {
+        width: 60%;
+        margin: 0 auto;
+    }
+    /* Everything else basically halved, or repositioned if positioning was an important element */
+    h1 {
+        font-size: 2.75vw;
+    }
+    h2 {
+        font-size: 1.375vw;
+    }
+    p {
+        padding: 0;
+        font-size: 1vw;
+    }
+    .overlay {
+        top: 11.15vw;
+        left: 40.45vw;    
+    }
+    .answerBtn {
+        font-size: 1vw;
+        width: 16vw;
+        height: 5vw;
+    }
+    .surrenderBtn {
+        font-size: 1vw;
+        width: 5.5vw;
+        height: 3vw;
+        bottom: 12.5vw;      
+    }
+    .restartBtn {
+        right: 4vw;
+    }
+    .giveUpBtn {
+        left: 34.24vw;
+    }
+}
