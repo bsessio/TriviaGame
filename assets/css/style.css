@@ -80,6 +80,7 @@ button {
 
 .final {
     border: 1px white ridge;
+    max-width: 100%;
 }
 
 /* Slightly nudges down a few elements on the final page */
