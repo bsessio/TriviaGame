@@ -3,7 +3,8 @@
 let correct = 0,
     i = 0,
     count = 30,
-    counter = '';
+    counter = '',
+    touchDevice = /ipad|iphone|android|windows phone|blackberry/i.test(navigator.userAgent.toLowerCase());
 
 // Game starter! When you click Begin, it rewrites with what is in the 0th of the triviaArray.
 initialize = function () {

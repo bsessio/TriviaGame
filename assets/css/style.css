@@ -16,13 +16,13 @@ body {
 }
 
 p {
-    padding-top: 2vw;
+    padding: 2vw;
     display: block;
     text-align: center;
     font-weight: bolder;
     font-size: 2vw;
     text-shadow: 1px 1px 2px whitesmoke;
-    line-height: 1vw;
+    line-height: 3vw;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -172,6 +172,8 @@ button:hover {
 /* I designed the game to be clear and easy in Portrait mode.
 So essentially media queries makes the page look like it's in Portrait mode by halving all VW elements */
 
+/* Non-touch only hoverable trigger */
+
 @media (orientation: landscape) {
 
     /* New class to contain everything, essentially a body tag, to reduce all contained percentage-based elements */
@@ -187,8 +189,9 @@ So essentially media queries makes the page look like it's in Portrait mode by h
         font-size: 1.375vw;
     }
     p {
-        padding: 0;
+        padding: 2vw;
         font-size: 1vw;
+        line-height: 2vw;
     }
     .overlay {
         top: 11.15vw;
@@ -210,5 +213,11 @@ So essentially media queries makes the page look like it's in Portrait mode by h
     }
     .giveUpBtn {
         left: 34.24vw;
+    }
+}
+
+/* Disables hover at sizes usually for mobile devices */
+@media (max-width: 1024) {
+    button:hover {
     }
 }
