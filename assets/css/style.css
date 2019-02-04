@@ -217,7 +217,7 @@ So essentially media queries makes the page look like it's in Portrait mode by h
 }
 
 /* Disables hover at sizes usually for mobile devices */
-@media (max-width: 1024) {
+@media (max-width: 1024px) {
     button:hover {
     }
 }
