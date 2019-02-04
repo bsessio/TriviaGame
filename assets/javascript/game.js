@@ -59,7 +59,7 @@ actions = function () {
     // Every time actions is run, appends the floating 'surrender' buttons and lists the current score.
     $("#triviaScreen").append(
         "<button class='surrenderBtn giveUpBtn'>do not know</button>" +
-        "<button class='surrenderBtn restartBtn beginBtn'>Restart Game</button>" +
+        "<button class='surrenderBtn restartBtn beginBtn'>Reset Game</button>" +
         "<div class='scoreFloat'><div>correct</div><span class='green'>" + correct + "</span> / 15</div>"
     );
 
