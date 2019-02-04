@@ -32,7 +32,7 @@ actions = function () {
         $('.scoreFloat').html("<div class='scoreFloat'><div>correct</div><span class='green'>" + correct + "</span> / 15</div>");
         setTimeout(function () {
             nextQuestion();
-        }, 40);
+        }, 4000);
         clearInterval(counter);
     };
 
