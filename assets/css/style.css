@@ -59,11 +59,6 @@ button {
     text-transform: uppercase;
 }
 
-/* Pseudoclass to change the button highlighted's background */
-button:hover {
-    background-color: rgb(94, 25, 21);
-}
-
 /* ---------- CUSTOM CLASS SELECTORS --------- */
 /* --PAGE STYLING-- */
 /* The core page elements after the very large logo and subtitle overlay */
@@ -216,8 +211,10 @@ So essentially media queries makes the page look like it's in Portrait mode by h
     }
 }
 
-/* Disables hover at sizes usually for mobile devices */
-@media (max-width: 1024px) {
-    button:hover {
-    content: none}
+/* Enables hover at sizes after all mobile devices */
+@media (min-width: 1025px) {
+    /* Pseudoclass to change the button highlighted's background */
+button:hover {
+    background-color: rgb(94, 25, 21);
+}
 }

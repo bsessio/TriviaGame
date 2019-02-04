@@ -61,7 +61,7 @@ actions = function () {
         "<button class='surrenderBtn giveUpBtn'>do not know</button>" +
         "<button class='surrenderBtn restartBtn beginBtn'>Reset Game</button>" +
         "<div class='scoreFloat'><div>correct</div><span class='green'>" + correct + "</span> / 15</div>"
-    );
+    ); 
 
     // Clickhandler for the restart button. Due to DOMs and loading sequence, this repeats the beginBtn click function. Not DRY.
     $(".restartBtn").on("click", function () {
