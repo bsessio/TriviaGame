@@ -15,6 +15,8 @@ And if you ever want, you can restart the game with an easy button click.
 
 Once you get to the end, you can always try again and see if you can remember enough to get a perfect score!
 
+You'll find the deployed site at https://bsessio.github.io/TriviaGame/
+
 ## Authors
 
 * **Bowie Sessions** - *Initial work* 
